@@ -25,6 +25,7 @@
 
 
 2. La simulation
+
   Vous allez simuler les caisses dans une epicerie en utilisant vos structures Queue et Client. Une ́epicerie a 4 caisses ayant chacune une file d’attente.
   La simulation dure 200 cycles. À chaque cycle:  
   
