@@ -33,7 +33,9 @@
   2. Chaque caissier traite un article du client à la première position dans sa file. Si le client à la caisse n’a plus d’articles, ce dernier quitte l’epicerie et le prochain client dans la file passe à la caisse. Si sa file est vide, le caissier ne fait rien.
   3. Le système pause pendant 1000 millisecondes (Utilisez la fonction sleep).
 
+
 2.1 L’ ́etat des caisses
+
   À chaque 1 cycle, l’etat des files d’attente et des caisses est affiche à la console. Vous devez imprimer le contenu de toutes les files d’attente.
 
       ÉTAT DES CAISSES AU CYCLE #56
@@ -45,6 +47,7 @@
   N’hesitez pas à modifier la valeur des paramètres de la simulation (le nombre de caisses [4], le nombre de cycles [200], le taux d’arrivee des nouveaux clients [6], le nombre d’articles moyen par panier [10], le temps de pause par cycle [1000] et le taux d’impression de l’etat des caisses [1]).
 
 2.2 Le rapport
+
   À la fin de la simulation, un rapport est affiche, contenant, au minimum, les informations suivantes :
 
       STATISTIQUES :
@@ -57,6 +60,7 @@
       Nombre d’articles moyen : 10
 
 2.3 Les paniers des clients
+
   Les informations suivantes doivent être conservees par client : le numero du cycle auquel il est arrive et le nombre d’articles dans son panier. Le comportement des clients est simple : une fois qu’ils sont ajoutes à une file, ils ne quittent pas tant qu’ils ne sont pas servis. Ils ne changent pas de file et ne perdent pas patience.
   Le nombre d’articles dans le panier d’un client suit une distribution exponentielle. La fonction double randExpo(double lambda) retourne un naturel au hasard, selon la distribution exponentielle d’esperance 1/lambda :
   
