@@ -1,45 +1,87 @@
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+1 Le Boggle
 
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
+  Le jeu de Boggle (Hasbro) est un jeu de lettres dont le but est de trouver le plus de mots possibles formes par des des sur un plateau.
+Au debut du jeu, 16 des avec une lettre sur chaque face sont jetes et places sur une grille de 4 rangees par 4 colonnes. Par exemple, une grille de jeu possible est :
+    
+    IDXT 
+    MHEI 
+    ERVN 
+    TLLU
 
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
+  Le joueur doit trouver le plus possible de mots qui sont formes par ces des en respectant les conditions suivantes :
+• Chaque de ne peut être utilise qu’une seule fois par mot.
+• Les des formant le mot doivent se toucher (diagonales inclues). 
+• Le mot doit être en francais.
 
----
+  Dans l’exemple, plus haut, le mot UNITE est forme en parcourant les des dans l’ordre : (3,3), (2,3), (1,3), (0,3), (1,2). Le mot VERT est forme en parcourant les des dans l’ordre : (2,2), (1,2), (2,1), (3,0).
 
-## Edit a file
+  La partie se termine quand le joueur entre le mot vide.
+  À la fin de la partie, tous les mots en francais qui apparaissent dans la grille sont affiches.
 
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
 
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
+2 Les dés
 
----
+  Les des du jeu de Boggle en francais sont les suivants :
 
-## Create a file
+        #define R 4
+        #define C 4
+        #define NB_FACES 6
+        /** Les 16 des officiels du jeu de boggle en francais */
+        const char DES[R * C][NB_FACES] =
+          3
+        {{’E’, ’T’, ’U’, ’K’, ’N’, ’O’}, // 0
+         {’E’, ’V’, ’G’, ’T’, ’I’, ’N’}, // 1
+         {’D’, ’E’, ’C’, ’A’, ’M’, ’P’}, // 2
+         {’I’, ’E’, ’L’, ’R’, ’U’, ’W’}, // 3
+         {’E’, ’H’, ’I’, ’F’, ’S’, ’E’}, // 4
+         {’R’, ’E’, ’C’, ’A’, ’L’, ’S’}, // 5
+         {’E’, ’N’, ’T’, ’D’, ’O’, ’S’}, // 6
+         {’O’, ’F’, ’X’, ’R’, ’I’, ’A’}, // 7
+         {’N’, ’A’, ’V’, ’E’, ’D’, ’Z’}, // 8
+         {’E’, ’I’, ’O’, ’A’, ’T’, ’A’}, // 9
+         {’G’, ’L’, ’E’, ’N’, ’Y’, ’U’}, // 10
+         {’B’, ’M’, ’A’, ’Q’, ’J’, ’O’}, // 11
+         {’T’, ’L’, ’I’, ’B’, ’R’, ’A’}, // 12
+         {’S’, ’P’, ’U’, ’L’, ’T’, ’E’}, // 13
+         {’A’, ’I’, ’M’, ’S’, ’O’, ’R’}, // 14
+         {’E’, ’N’, ’H’, ’R’, ’I’, ’S’}}; // 15
+ 
+3 Le dictionnaire
+  Le fichier francais.txt contient tous les mots en francais en ordre alphabetique, incluant les conjugaisons et les accords, en majuscules, sans accents, ni caractères speciaux.
+  Le fichier lireFichier.c lit un fichier et imprime son contenu, ligne par ligne, à la console.
+  
+4 À faire
+  Vous devez implementer un jeu de Boggle console en C, incluant la recherche dans le dictionnaire, la generation de la grille de jeu, la recherche d’un mot dans la grille et l’interaction avec l’utilisateur.
+  Votre solution incluera trois algorithme :
+      1. Un algorithme pour generer une grille de jeu.
+      2. Un algorithme pour chercher un mot dans le dictionnaire. 
+      3. Un algorithme pour chercher un mot dans la grille de jeu.
+  Le pseudo-code du dernier algorithme se trouve à la section 4.1.
+Portez une attention particulière sur l’efficacit ́e de vos solutions algorithmiques.
+  
+4.1 Pseudo-codes
+  Voici deux pseudo-codes de haut niveau qui resolvent Boggle.
 
-Next, you’ll add a new file to this repository.
+MotDansGrille - D ́etermine si un mot est dans la grille de jeu
+Entrees : grille, mot
+Pour chaque case c dans la grille Marquer c comme visite
+Si formeMot(grille, mot, c)
+Retourner vrai
+Marquer c comme non-visite
+  Retourner Faux
 
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
-
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
-
----
-
-## Clone a repository
-
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
-
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
-
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+FormeMot - Determine si un mot est dans la grille à partir d’un de
+Entrees : grille, mot, c (une case dans la grille)
+  Si le mot est vide
+     Retourner vrai
+Si le de de la case c n’a pas comme lettre la première lettre de mot
+     Retourner faux
+  Pour case v voisine de c qui n’a pas encore  ́ete visitee
+Marquer v comme visit ́e
+motSuivant <- mot sans la première lettre Si formeMot(grille, motSuivant, v)
+Retourner vrai
+Marquer v comme non-visitée
+Retourner Faux
+  
+  
+  
