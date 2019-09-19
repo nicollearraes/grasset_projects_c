@@ -1,4 +1,5 @@
 1 Le Yahtzee
+
   Vous allez developper un programme qui permet à un·e utilisateur·trice de jouer au Yahtzee. Le Yahtzee est un jeu de hasard où, à chaque tour, le joueur lance cinq des ordinaires et choisit une figure à ajouter à sa feuille de score. La partie se termine après 13 tours.
 Un tour se d ́eroule ainsi :
     1. Les cinq des sont lances.
