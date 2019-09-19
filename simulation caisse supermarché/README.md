@@ -73,6 +73,7 @@
       }
  
   Sur certains systèmes d’exploitation, vous devrez utiliser l’option lm pour compiler.
+  
         gcc *.c -lm
   
   
