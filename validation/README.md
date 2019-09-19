@@ -14,6 +14,6 @@ Validation
         0#0#
 
   Rendez l’expérience utilisateur plus agréable pour la question de l’échiquier.
-    • Validez que les symboles choisis sont différents.
-    • Validez que les symboles choisis sont des caractères d’impression (entre 32 et 127 inclusivement).
-    • Validez que le nombre entré est entre 1 et 16 inclusivement.
+  • Validez que les symboles choisis sont différents.
+  • Validez que les symboles choisis sont des caractères d’impression (entre 32 et 127 inclusivement).
+  • Validez que le nombre entré est entre 1 et 16 inclusivement.
