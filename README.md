@@ -1,2 +1,2 @@
-# grasset_games_c
+# grasset_projects_c
 school projects in C
