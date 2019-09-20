@@ -10,3 +10,5 @@ do
 and then
 
     ./a.out
+
+the games are all in french!
