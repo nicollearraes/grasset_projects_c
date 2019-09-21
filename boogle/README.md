@@ -47,41 +47,21 @@ Au debut du jeu, 16 des avec une lettre sur chaque face sont jetes et places sur
          {’E’, ’N’, ’H’, ’R’, ’I’, ’S’}}; // 15
  
 3 Le dictionnaire
+
   Le fichier francais.txt contient tous les mots en francais en ordre alphabetique, incluant les conjugaisons et les accords, en majuscules, sans accents, ni caractères speciaux.
   Le fichier lireFichier.c lit un fichier et imprime son contenu, ligne par ligne, à la console.
   
 4 À faire
+
   Vous devez implementer un jeu de Boggle console en C, incluant la recherche dans le dictionnaire, la generation de la grille de jeu, la recherche d’un mot dans la grille et l’interaction avec l’utilisateur.
   Votre solution incluera trois algorithme :
-      1. Un algorithme pour generer une grille de jeu.
-      2. Un algorithme pour chercher un mot dans le dictionnaire. 
-      3. Un algorithme pour chercher un mot dans la grille de jeu.
-  Le pseudo-code du dernier algorithme se trouve à la section 4.1.
-Portez une attention particulière sur l’efficacit ́e de vos solutions algorithmiques.
-  
-4.1 Pseudo-codes
-  Voici deux pseudo-codes de haut niveau qui resolvent Boggle.
+      
+   1. Un algorithme pour generer une grille de jeu.
+      
+   2. Un algorithme pour chercher un mot dans le dictionnaire. 
+      
+   3. Un algorithme pour chercher un mot dans la grille de jeu.
 
-    MotDansGrille - D ́etermine si un mot est dans la grille de jeu
-    Entrees : grille, mot
-    Pour chaque case c dans la grille Marquer c comme visite
-    Si formeMot(grille, mot, c)
-    Retourner vrai
-    Marquer c comme non-visite
-      Retourner Faux
-
-    FormeMot - Determine si un mot est dans la grille à partir d’un de
-    Entrees : grille, mot, c (une case dans la grille)
-      Si le mot est vide
-         Retourner vrai
-    Si le de de la case c n’a pas comme lettre la première lettre de mot
-         Retourner faux
-      Pour case v voisine de c qui n’a pas encore  ́ete visitee
-    Marquer v comme visit ́e
-    motSuivant <- mot sans la première lettre Si formeMot(grille, motSuivant, v)
-    Retourner vrai
-    Marquer v comme non-visitée
-    Retourner Faux
   
   
   
